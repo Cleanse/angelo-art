@@ -1,0 +1,23 @@
+{
+    "name": "cleanse/angelo-art",
+    "type": "october-theme",
+    "description": "Angelo Lovato Art theme",
+    "keywords": ["october", "cms", "angelo lovato art", "theme"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul E. Lovato",
+            "email": "plovato@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
