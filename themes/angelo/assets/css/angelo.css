@@ -403,6 +403,35 @@ body {
     font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header,
+.page-footer {
+    flex-shrink: 0;
+}
+
+.page-body {
+    flex-grow: 1;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#angelo-navigation > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #angelo-navigation {
     display: flex;
     justify-content: space-around;
@@ -446,13 +475,43 @@ body {
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width: 1199.98px) {
     .nav-links {
         width: 60%;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991.98px) {
+    #angelo-navigation h4 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
     body {
         overflow-x: hidden;
     }
