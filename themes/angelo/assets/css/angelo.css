@@ -476,6 +476,11 @@ body {
     transition: all 0.3s ease;
 }
 
+.copyright-text {
+    font-size: .8rem;
+    margin: .25rem 0 .5rem;
+}
+
 @media screen and (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -541,6 +546,10 @@ body {
 
     .mobile-nav {
         display: block;
+    }
+
+    .copyright-text {
+        text-align: center;
     }
 }
 
