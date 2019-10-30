@@ -1,0 +1,33 @@
+{% if this.page.url != '/' %}
+{% set title_brand = " - Angelo Lovato Art" %}
+{% endif %}
+<html lang="en">
+<head>
+    <title>{{ this.page.title }}{{ title_brand }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="{{ this.page.description }}"/>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ this.controller.currentPageUrl() }}">
+    <meta property="og:title" content="{{ this.page.meta_title }}{{ title_brand }}">
+    <meta property="og:site_name" content="{{ this.page.meta_title }}">
+    <meta property="og:description" content="{{ this.page.meta_description }}">
+    {% if this.page.open_graph_img %}
+    <meta property="og:image" content="{{ this.page.open_graph_img }}">
+    {% else %}
+    <meta property="og:image" content="{{ 'assets/images/angelo_og.jpeg'|theme }}">
+    {% endif %}
+    <meta name="theme-color" content="#502000">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/apple-touch-icon.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicon-32x32.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicon-16x16.png'|theme }}">
+    <link rel="manifest" href="{{ 'assets/images/site.webmanifest'|theme }}">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kite+One|Lato&display=swap">
+    <link rel="stylesheet" href="{{ 'assets/css/angelo.css'|theme }}?v=33">
+    {% styles %}
+</head>
+<body>
