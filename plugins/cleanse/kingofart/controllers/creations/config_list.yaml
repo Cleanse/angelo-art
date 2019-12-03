@@ -11,7 +11,7 @@ modelClass: Cleanse\KingOfArt\Models\Creation
 # List Title
 title: Manage Art Pieces
 
-# Link URL for each record todo: look
+# Link URL for each record
 recordUrl: cleanse/kingofart/creations/update/:id
 
 # Message to display if the list is empty
