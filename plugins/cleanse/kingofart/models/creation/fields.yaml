@@ -1,0 +1,38 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: Art Title
+        span: left
+        placeholder: Art Title
+        required: true
+
+    excerpt:
+        label: Art Description
+        span: left
+        placeholder: Art Description
+        required: true
+
+    image:
+        label: Art Image
+        type: fileupload
+        mode: image
+        imageHeight: 1200
+        imageWidth: 1200
+        thumbOptions:
+                mode: crop
+                offset:
+                    - 0
+                    - 0
+                quality: 90
+                sharpen: 0
+                interlace: false
+                extension: auto
+
+    is_featured:
+        label: Featured Content?
+        type: checkbox
+        default: false

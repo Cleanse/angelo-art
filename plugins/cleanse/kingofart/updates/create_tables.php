@@ -16,8 +16,6 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('slug')->index();
             $table->text('excerpt')->nullable();
-            $table->text('content');
-            $table->timestamp('published_at')->nullable();
             $table->boolean('is_featured')->default(false);
             $table->timestamps();
         });
