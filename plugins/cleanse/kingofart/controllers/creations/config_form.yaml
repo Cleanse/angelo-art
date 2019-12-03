@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Creation
+form: ~/plugins/cleanse/kingofart/models/creation/fields.yaml
+modelClass: Cleanse\KingOfArt\Models\Creation
+defaultRedirect: cleanse/kingofart/creations
+
+create:
+    redirect: cleanse/kingofart/creations/update/:id
+    redirectClose: cleanse/kingofart/creations
+
+update:
+    redirect: cleanse/kingofart/creations
+    redirectClose: cleanse/kingofart/creations
