@@ -1,23 +1,10 @@
 <div class="container">
-    <h1>Angelo Lovato</h1>
-    <p>The King of Art</p>
-    <hr />
-
     <div class="gallery">
-        <a href="//homepages.cae.wisc.edu/~ece533/images/airplane.png" data-caption="Image caption">
-            <img src="//homepages.cae.wisc.edu/~ece533/images/airplane.png" alt="First image">
+        {% for creation in featured %}
+        <a href="{{ creation.image.path ?: default_image }}" data-caption="Image caption" class="text-center">
+            <img src="{{ creation.image.path ?: default_image }}" alt="First image">
+            <p class="art-title">{{ creation.title }}</p>
         </a>
-        <a href="//homepages.cae.wisc.edu/~ece533/images/boat.png">
-            <img src="//homepages.cae.wisc.edu/~ece533/images/boat.png" alt="Second image">
-        </a>
+        {% endfor %}
     </div>
-
-    <h2>Examples</h2>
-    <p>
-        https://www.sitebuilderreport.com/inspiration/artist-websites
-    </p>
-    <p>
-        Use the featured art here on the home page.
-    </p>
-    <hr />
 </div>
