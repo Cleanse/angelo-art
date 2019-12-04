@@ -20,17 +20,6 @@ fields:
         label: Art Image
         type: fileupload
         mode: image
-        imageHeight: 1200
-        imageWidth: 1200
-        thumbOptions:
-                mode: crop
-                offset:
-                    - 0
-                    - 0
-                quality: 90
-                sharpen: 0
-                interlace: false
-                extension: auto
 
     is_featured:
         label: Featured Content?
