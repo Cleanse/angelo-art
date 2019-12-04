@@ -1,10 +1,13 @@
 <div class="container">
-    <div class="gallery">
+    <div class="card-columns">
         {% for creation in featured %}
-        <a href="{{ creation.image.path ?: default_image }}" data-caption="Image caption" class="text-center">
-            <img src="{{ creation.image.path ?: default_image }}" alt="First image">
-            <p class="art-title">{{ creation.title }}</p>
-        </a>
+        <div class="card">
+            <a href="/g/{{ creation.slug }}" data-caption="{{ creation.title }}" class="text-center">
+                <img src="{{ creation.image ? creation.image.getThumb(auto, 480) : default_image }}"
+                     alt="{{ creation.title }}" class="card-img-top">
+                <p class="art-title">{{ creation.title }}</p>
+            </a>
+        </div>
         {% endfor %}
     </div>
 </div>
