@@ -457,7 +457,7 @@ body {
 }
 
 .logo p {
-    font-size: .95rem;
+    font-size: .75rem;
 }
 
 .nav-links {
@@ -548,6 +548,22 @@ body {
     border-style: none;
 }
 
+/** About */
+.about-flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-text h1 {
+    margin: 1rem 0 1.25rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.about-photo img {
+    max-width: 100%;
+}
+
 @media screen and (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -563,6 +579,11 @@ body {
         column-gap: 1.25rem;
         orphans: 1;
         widows: 1;
+    }
+
+    /** About */
+    .about-flex-wrapper {
+        justify-content: space-between
     }
 }
 
@@ -633,6 +654,12 @@ body {
 
     .copyright-text {
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .about-flex-wrapper {
+        flex-wrap: wrap-reverse;
     }
 }
 

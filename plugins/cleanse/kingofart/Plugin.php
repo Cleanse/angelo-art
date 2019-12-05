@@ -21,7 +21,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Cleanse\KingOfArt\Components\Featured' => 'cleanseKingFeatured'
+            'Cleanse\KingOfArt\Components\Featured' => 'cleanseKingFeatured',
+            'Cleanse\KingOfArt\Components\About' => 'cleanseKingAbout'
         ];
     }
 
