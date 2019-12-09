@@ -20,4 +20,16 @@ class Creation extends Model
     public $attachOne = [
         'image' => 'System\Models\File'
     ];
+
+    public function scopeIsVisible($query)
+    {
+        return $query
+            ->where('is_hidden', false);
+    }
+
+    public function scopeIsFeatured($query)
+    {
+        return $query
+            ->where('is_featured', true);
+    }
 }
