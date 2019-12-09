@@ -25,3 +25,8 @@ fields:
         label: Featured Content?
         type: checkbox
         default: false
+
+    is_hidden:
+            label: Hide Content?
+            type: checkbox
+            default: false
