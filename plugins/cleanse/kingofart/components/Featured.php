@@ -26,7 +26,7 @@ class Featured extends ComponentBase
 
     protected function loadCreations()
     {
-        return Creation::where(['is_featured' => true, 'is_hidden' => false])
+        return Creation::isFeatured()->isVisible()
             ->orderBy('created_at', 'desc')
             ->take(10)->get();
     }
