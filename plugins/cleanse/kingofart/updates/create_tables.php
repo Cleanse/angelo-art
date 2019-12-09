@@ -16,6 +16,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('slug')->index();
             $table->text('excerpt')->nullable();
+            $table->boolean('is_hidden')->default(false);
             $table->boolean('is_featured')->default(false);
             $table->timestamps();
         });
