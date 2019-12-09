@@ -2,10 +2,9 @@
     <div class="card-columns">
         {% for creation in gallery %}
         <div class="card">
-            <a href="/g/{{ creation.slug }}" data-caption="{{ creation.title }}" class="text-center">
+            <a href="/p/{{ creation.slug }}" data-caption="{{ creation.title }}" class="text-center">
                 <img src="{{ creation.image ? creation.image.getThumb(auto, 480) : default_image }}"
                      alt="{{ creation.title }}" class="card-img-top">
-                <p class="art-title">{{ creation.title }}</p>
             </a>
         </div>
         {% endfor %}
