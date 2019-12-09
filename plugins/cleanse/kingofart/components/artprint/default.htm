@@ -1,0 +1,6 @@
+<div class="container">
+    <img src="{{ print.image ? print.image.getThumb(auto, 480) : default_image }}" alt="{{ print.excerpt }}"
+         class="card-img-top">
+    <h1>{{ print.title }}</h1>
+    <p>{{ print.excerpt }}</p>
+</div>

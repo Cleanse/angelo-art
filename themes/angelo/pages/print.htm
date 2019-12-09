@@ -1,0 +1,23 @@
+title = "Art Print"
+url = "/p/:slug"
+layout = "default"
+description = "Viewing an art piece by Angelo."
+
+[cleanseKingPrint]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd()
+{
+    $this->page->title            = $this['print']->title ? $this['print']->title : '';
+    $this->page->description      = $this['print']->excerpt ?: 'Viewing a work of art.';
+    $this->meta_title             = $this['print']->title ? $this['print']->title : '';
+    $this->page->meta_description = $this['print']->excerpt ?: 'Viewing a work of art.';
+
+    if (isset($this['print']->image)) {
+        $this->page->open_graph_img = $this['print']->image['path'] ?: false;
+    }
+}
+?>
+==
+{% component 'cleanseKingPrint' %}
