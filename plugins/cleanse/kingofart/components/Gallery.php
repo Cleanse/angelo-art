@@ -26,6 +26,6 @@ class Gallery extends ComponentBase
 
     protected function loadCreations()
     {
-        return Creation::where('is_hidden', false)->orderBy('created_at', 'desc')->get();
+        return Creation::isVisible()->orderBy('created_at', 'desc')->get();
     }
 }
