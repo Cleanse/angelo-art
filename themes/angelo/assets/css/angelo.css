@@ -469,6 +469,10 @@ body {
     text-decoration: none;
     letter-spacing: 3px;
 }
+.nav-links a.active {
+    color: #481e1e;
+    font-weight: bold;
+}
 
 .mobile-nav {
     display: none;
