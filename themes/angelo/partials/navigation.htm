@@ -8,9 +8,9 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/gallery" class="{% if this.page.url == '/gallery' %}active{% endif %}">Gallery</a></li>
+            <li><a href="/about" class="{% if this.page.url == '/about' %}active{% endif %}">About</a></li>
+            <li><a href="/contact" class="{% if this.page.url == '/contact' %}active{% endif %}">Contact</a></li>
         </ul>
 
         <div class="mobile-nav">
