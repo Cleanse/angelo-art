@@ -1,4 +1,7 @@
 1.0.1: First version
 1.0.2:
     - Create Art Database Tables
-    - create_tables.php
+    - create_creations_tables.php
+1.0.3:
+    - Create Contact Database Tables
+    - create_contact_tables.php
