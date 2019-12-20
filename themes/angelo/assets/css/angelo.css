@@ -564,6 +564,9 @@ body {
     font-size: 2rem;
     font-weight: bold;
 }
+.about-photo {
+    text-align: right;
+}
 .about-photo img {
     max-width: 100%;
 }
@@ -596,8 +599,12 @@ body {
         max-width: 720px;
     }
 
+    .about-text {
+        width: 40%;
+    }
+
     .about-photo {
-        width: 50%;
+        width: 57%;
     }
 }
 
@@ -669,8 +676,21 @@ body {
         flex-wrap: wrap-reverse;
     }
 
+    .about-photo {
+        width: 100%;
+    }
+    .about-photo img {
+        width: 100%;
+    }
+
     .copyright-text {
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .about-photo {
+        width: 100%;
     }
 }
 
