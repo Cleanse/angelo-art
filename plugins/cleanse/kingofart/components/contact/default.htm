@@ -1,14 +1,32 @@
 <div class="container">
-    <div class="about-flex-wrapper">
-        <div class="about-text">
-            <h1>Contact</h1>
-            <p>Angelo Lovato is an artist from Gallup, NM.</p>
+    <div class="contact-wrapper">
+        <div class="contact-text">
+            <h1>Contact Angelo</h1>
+            <p>For any inquiries regarding image licensing, prints, brand collaborations, tattoos, or anything else,
+                please complete the form below and we'll be in touch shortly.</p>
+            <p><small id="SubmitHelp" class="form-text text-muted">
+                Note: All fields are required.</small></p>
             <hr>
-            <p><em>"Pain is temporary, Art is Forever!"</em></p>
-        </div>
+            {{ form_open({ request: 'onContact' }) }}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-control">
+                </div>
 
-        <div class="about-photo">
-            <img src="/plugins/cleanse/kingofart/assets/images/angelo-profile.jpg">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">
+                        We'll never share your email with anyone else.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" class="form-control" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            {{ form_close() }}
         </div>
     </div>
 </div>
