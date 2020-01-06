@@ -25,7 +25,8 @@ class Plugin extends PluginBase
             'Cleanse\KingOfArt\Components\Gallery' => 'cleanseKingGallery',
             'Cleanse\KingOfArt\Components\ArtPrint' => 'cleanseKingPrint',
             'Cleanse\KingOfArt\Components\About' => 'cleanseKingAbout',
-            'Cleanse\KingOfArt\Components\Contact' => 'cleanseKingContact'
+            'Cleanse\KingOfArt\Components\Contact' => 'cleanseKingContact',
+            'Cleanse\KingOfArt\Components\ContactThanks' => 'cleanseKingContactThanks'
         ];
     }
 
