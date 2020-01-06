@@ -3,6 +3,9 @@
 namespace Cleanse\KingOfArt\Components;
 
 use Cms\Classes\ComponentBase;
+use Illuminate\Support\Facades\Redirect;
+
+use Cleanse\KingOfArt\Models\Message;
 
 class Contact extends ComponentBase
 {
@@ -16,12 +19,25 @@ class Contact extends ComponentBase
 
     public function onContact()
     {
-        $form = false;
+        $form = post();
 
-        if (!$form) {
-            return 'Please fill out all fields.';
+        if (count($form) === 3) {
+            return Redirect::to('/contact');
         }
 
-        return 't e x t';
+        return $this->addMessage($form);
+    }
+
+    private function addMessage($form)
+    {
+        $newContact = new Message();
+
+        $newContact->name = $form['name'];
+        $newContact->email = $form['email'];
+        $newContact->message = $form['message'];
+
+        $newContact->save();
+
+        return Redirect::to('/contact/thanks');
     }
 }

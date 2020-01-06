@@ -9,32 +9,22 @@ class CreateContactTable extends Migration
 {
     public function up()
     {
-        Schema::create('cleanse_koa_contact_forms', function($table)
+        Schema::create('cleanse_koa_contact_messages', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
             $table->string('email');
-            $table->timestamps();
-        });
-
-        Schema::create('cleanse_koa_contact_fields', function($table)
-        {
-            $table->engine = 'InnoDB';
-            $table->increments('id');
-            $table->integer('form_id')->unsigned()->index();
-            $table->string('name');
-            $table->string('type');
-            $table->string('placeholder')->nullable();
-            $table->text('description')->nullable();
-            $table->json('options')->nullable();
+            $table->string('message');
+            $table->integer('is_new')->unsigned()->default(1);
+            $table->integer('is_starred')->unsigned()->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::drop('cleanse_koa_contact_fields');
-        Schema::drop('cleanse_koa_contact_forms');
+        Schema::drop('cleanse_koa_contact_messages');
     }
 }
