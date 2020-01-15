@@ -422,6 +422,14 @@ body {
 .text-center {
     text-align: center;
 }
+.text-center img {
+    max-width: 100%;
+}
+
+.subtext {
+    color: #5d6c74;
+    font-weight: 300;
+}
 
 .container {
     width: 100%;
