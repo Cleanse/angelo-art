@@ -16,7 +16,7 @@ class Creations extends Controller
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
 
-    public $requiredPermissions = ['cleanse.kingofart.manage_art'];
+    public $requiredPermissions = ['cleanse.kingofart.manage_content'];
 
     public function __construct()
     {
