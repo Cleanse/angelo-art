@@ -4,7 +4,6 @@ namespace Cleanse\KingOfArt\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use Cleanse\KingOfArt\Models\Message;
 
 class Messages extends Controller
 {
@@ -27,8 +26,6 @@ class Messages extends Controller
 
     public function index()
     {
-        $this->vars['messagesTotal'] = Message::count();
-
         $this->asExtension('ListController')->index();
     }
 

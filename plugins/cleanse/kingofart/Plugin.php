@@ -35,7 +35,7 @@ class Plugin extends PluginBase
         return [
             'angelo' => [
                 'label' => 'King of Art',
-                'url' => Backend::url('cleanse/kingofart/creations'),
+                'url' => Backend::url('cleanse/kingofart/home'),
                 'icon' => 'icon-pencil',
                 'iconSvg' => 'plugins/cleanse/kingofart/assets/images/angelo.svg',
                 'permissions' => ['cleanse.kingofart.*'],
@@ -57,12 +57,6 @@ class Plugin extends PluginBase
                         'label' => 'Message List',
                         'icon' => 'icon-comments',
                         'url' => Backend::url('cleanse/kingofart/messages'),
-                        'permissions' => ['cleanse.kingofart.manage_content']
-                    ],
-                    'saved_messages' => [
-                        'label' => 'Saved Messages',
-                        'icon' => 'icon-star',
-                        'url' => Backend::url('cleanse/kingofart/messages/saved'),
                         'permissions' => ['cleanse.kingofart.manage_content']
                     ],
                     'new_reply' => [

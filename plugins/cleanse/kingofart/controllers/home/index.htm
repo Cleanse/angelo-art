@@ -1,0 +1,39 @@
+<div class="p-x">
+    <h1 class="br-p"><?= $pageTitle ?></h1>
+
+    <div class="messages-container p-a bg-primary">
+        <h3>Messages</h3>
+
+        <p>
+            You can read, reply, and or save your contact messages.
+        </p>
+
+        <div class="control-toolbar">
+            <div class="toolbar-item toolbar-primary">
+                <div data-control="toolbar">
+                    <a href="messages" class="btn btn-primary oc-icon-copy">All Messages</a>
+                </div>
+            </div>
+        </div>
+
+        <?php if ($messagesTotal): ?>
+        <div class="callout fade in callout-info no-subheader">
+            <div class="header">
+                <i class="icon-lightbulb-o"></i>
+                <h3><a href="messages">New Messages: <?= $messagesTotal ?></a></h3>
+            </div>
+        </div>
+        <?php endif ?>
+    </div>
+
+    <hr>
+
+    <div class="creations-container p-a bg-primary">
+        <h3>Art Gallery</h3>
+
+        <p>
+            You can add new art, hide "sold out" art, etc.
+        </p>
+        <a href="creations" class="btn btn-primary oc-icon-file">Manage Art</a>
+    </div>
+</div>

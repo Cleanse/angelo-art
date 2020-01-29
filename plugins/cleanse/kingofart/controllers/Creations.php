@@ -4,7 +4,6 @@ namespace Cleanse\KingOfArt\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use Cleanse\KingOfArt\Models\Creation;
 
 class Creations extends Controller
 {
@@ -27,8 +26,6 @@ class Creations extends Controller
 
     public function index()
     {
-        $this->vars['creationsTotal'] = Creation::count();
-
         $this->asExtension('ListController')->index();
     }
 

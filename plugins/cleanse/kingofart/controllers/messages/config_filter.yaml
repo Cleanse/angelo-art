@@ -5,12 +5,12 @@
 scopes:
 
     created_at:
-
-        # Filter name
         label: Date Added
-
-        # Filter type
         type: daterange
-
-        # SQL Conditions
         conditions: created_at >= ':after' AND created_at <= ':before'
+
+    is_starred:
+        label: Saved Messages
+        type: checkbox
+        default: 0
+        conditions: is_starred >= 1
