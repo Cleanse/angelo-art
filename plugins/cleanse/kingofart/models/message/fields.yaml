@@ -1,0 +1,35 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: Contact Name
+        span: left
+        required: false
+
+    email:
+        label: Contact Email
+        span: left
+        required: false
+
+    subject:
+        label: Message Subject
+        span: left
+        required: false
+
+    message:
+        label: Message Content
+        type: text
+        default: false
+
+    is_new:
+        label: Mark as unread?
+        type: checkbox
+        default: false
+
+    is_starred:
+            label: Flag message as starred?
+            type: checkbox
+            default: false

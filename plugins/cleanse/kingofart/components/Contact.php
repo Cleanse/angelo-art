@@ -21,7 +21,13 @@ class Contact extends ComponentBase
     {
         $form = post();
 
+        return $form;
+
         if (count($form) === 3) {
+            return Redirect::to('/contact');
+        }
+
+        if (!isset($form['g-recaptcha-response'])) {
             return Redirect::to('/contact');
         }
 

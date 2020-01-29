@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Message
+form: ~/plugins/cleanse/kingofart/models/message/fields.yaml
+modelClass: Cleanse\KingOfArt\Models\Message
+defaultRedirect: cleanse/kingofart/messages
+
+create:
+    redirect: cleanse/kingofart/messages/update/:id
+    redirectClose: cleanse/kingofart/messages
+
+update:
+    redirect: cleanse/kingofart/messages
+    redirectClose: cleanse/kingofart/messages

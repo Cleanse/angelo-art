@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\Blog\Updates;
+namespace Cleanse\KingofArt\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
@@ -15,7 +15,8 @@ class CreateContactTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email');
-            $table->string('message');
+            $table->string('subject', 100);
+            $table->text('message');
             $table->integer('is_new')->unsigned()->default(1);
             $table->integer('is_starred')->unsigned()->default(0);
             $table->softDeletes();

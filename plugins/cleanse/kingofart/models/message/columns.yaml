@@ -1,0 +1,13 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    subject:
+        label: Message Subject
+        searchable: true
+
+    created_at:
+            label: Date
+            type: date
