@@ -45,13 +45,31 @@ class Plugin extends PluginBase
                         'label' => 'Art List',
                         'icon' => 'icon-copy',
                         'url' => Backend::url('cleanse/kingofart/creations'),
-                        'permissions' => ['cleanse.kingofart.manage_art']
+                        'permissions' => ['cleanse.kingofart.manage_content']
                     ],
                     'new_art' => [
                         'label' => 'New Art',
                         'icon' => 'icon-plus',
                         'url' => Backend::url('cleanse/kingofart/creations/create'),
-                        'permissions' => ['cleanse.kingofart.manage_art']
+                        'permissions' => ['cleanse.kingofart.manage_content']
+                    ],
+                    'messages' => [
+                        'label' => 'Message List',
+                        'icon' => 'icon-comments',
+                        'url' => Backend::url('cleanse/kingofart/messages'),
+                        'permissions' => ['cleanse.kingofart.manage_content']
+                    ],
+                    'saved_messages' => [
+                        'label' => 'Saved Messages',
+                        'icon' => 'icon-star',
+                        'url' => Backend::url('cleanse/kingofart/messages/saved'),
+                        'permissions' => ['cleanse.kingofart.manage_content']
+                    ],
+                    'new_reply' => [
+                        'label' => 'Reply to Message',
+                        'icon' => 'icon-reply',
+                        'url' => Backend::url('cleanse/kingofart/messages/reply'),
+                        'permissions' => ['cleanse.kingofart.manage_content']
                     ]
                 ]
             ]
