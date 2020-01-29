@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\Blog\Updates;
+namespace Cleanse\KingofArt\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
