@@ -4,7 +4,7 @@
 
 scopes:
 
-    published_date:
+    created_at:
 
         # Filter name
         label: Date Added
