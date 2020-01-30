@@ -21,6 +21,8 @@ class Home extends Controller
     public function index()
     {
         $this->pageTitle = 'King of Art';
+        $this->bodyClass = 'compact-container bg-primary';
+
         $this->vars['pageTitle'] = 'King of Art';
 
         $this->vars['messagesTotal'] = Message::isNew()->count();
