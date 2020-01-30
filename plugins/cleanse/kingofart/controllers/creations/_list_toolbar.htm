@@ -1,3 +1,10 @@
+<?php Block::put('breadcrumb') ?>
+<ul>
+    <li><a href="<?= Backend::url('cleanse/kingofart/home') ?>">King of Art</a></li>
+    <li>Creations</li>
+</ul>
+<?php Block::endPut() ?>
+
 <div data-control="toolbar">
     <a href="<?= Backend::url('cleanse/kingofart/creations/create') ?>" class="btn btn-primary oc-icon-plus">
         Add Art
