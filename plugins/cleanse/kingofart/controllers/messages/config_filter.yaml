@@ -14,3 +14,9 @@ scopes:
         type: checkbox
         default: 0
         conditions: is_starred >= 1
+
+    is_new:
+        label: New Messages
+        type: checkbox
+        default: 0
+        conditions: is_new >= 1
