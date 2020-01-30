@@ -21,14 +21,33 @@ class Contact extends ComponentBase
     {
         $form = post();
 
-        return $form;
-
         if (count($form) === 3) {
             return Redirect::to('/contact');
         }
 
-        if (!isset($form['g-recaptcha-response'])) {
-            return Redirect::to('/contact');
+        /**
+         * Recaptcha v2
+         */
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = [
+            'secret' => Config::get('app.reCAPTCHA'),
+            'response' => post("g-recaptcha-response")
+        ];
+
+        $options = [
+            'http' => [
+                'method' => 'POST',
+                'content' => http_build_query($data)
+            ]
+        ];
+
+        $context  = stream_context_create($options);
+        $verify = file_get_contents($url, false, $context);
+
+        $captcha_success=json_decode($verify);
+
+        if ($captcha_success->success == false) {
+            return Redirect::to('/contact')->with('status', 'There was an issue sending your message (ahem, Bot).');
         }
 
         return $this->addMessage($form);
@@ -40,6 +59,7 @@ class Contact extends ComponentBase
 
         $newContact->name = $form['name'];
         $newContact->email = $form['email'];
+        $newContact->subject = $form['subject'];
         $newContact->message = $form['message'];
 
         $newContact->save();
