@@ -2,6 +2,7 @@
 
 namespace Cleanse\KingOfArt\Components;
 
+use Config;
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\Redirect;
 
@@ -36,6 +37,8 @@ class Contact extends ComponentBase
 
         $options = [
             'http' => [
+                'header' => "Content-Type: application/x-www-form-urlencoded\r\n".
+                    "User-Agent:MyAgent/1.0\r\n",
                 'method' => 'POST',
                 'content' => http_build_query($data)
             ]
